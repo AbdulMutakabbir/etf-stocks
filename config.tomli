@@ -2,3 +2,18 @@
 stocks = './data/stocks'
 etfs = './data/etfs'
 symbols = './data/symbols_valid_meta.csv'
+
+[symbols_data_types]
+Symbol = 'object'
+'Security Name' = 'object'
+
+[etf_stock_data_type]
+Open = 'float64'
+High = 'float64'
+Low = 'float64'
+Close = 'float64'
+'Adj Close' = 'float64'
+Volume = 'int64'
+
+[format]
+date_format = '%Y-%m-%d'
