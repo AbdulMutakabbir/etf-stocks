@@ -2,7 +2,8 @@
 stocks = './data/stocks'
 etfs = './data/etfs'
 symbols = './data/symbols_valid_meta.csv'
-processed = './data/processed/'
+processed = './data/processed'
+engineered = './data/engineered'
 
 [symbols_data_types]
 Symbol = 'object'
