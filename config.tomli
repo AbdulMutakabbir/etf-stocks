@@ -25,3 +25,12 @@ model_dir = './models'
 
 [logs]
 log_dir = './logs'
+
+[deep_learning]
+epochs = 1000
+learning_rate = 0.001
+batch_size = 2048
+test_split = 0.4
+random_state = 1
+negative_slope = 0.01
+hidden_layer_size = 2048
