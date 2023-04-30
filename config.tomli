@@ -36,3 +36,10 @@ test_split = 0.4
 random_state = 1
 negative_slope = 0.01
 hidden_layer_size = 2048
+
+[random_forest]
+test_size = 0.4
+random_state = 1
+n_jobs = 4
+max_depth = 10
+n_estimators = 50
