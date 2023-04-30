@@ -1,3 +1,4 @@
 [data]
 stocks = './data/stocks'
 etfs = './data/etfs'
+symbols = './data/symbols_valid_meta.csv'
