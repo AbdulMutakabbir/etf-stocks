@@ -19,3 +19,9 @@ Volume = 'int64'
 
 [format]
 date_format = '%Y-%m-%d'
+
+[model]
+model_dir = './models'
+
+[logs]
+log_dir = './logs'
