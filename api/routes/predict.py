@@ -1,13 +1,16 @@
 from fastapi import APIRouter, HTTPException
 from api.model.predict_model import ModelType
+from api.utils.DLModel import DLModel
 import joblib 
+import torch
 
 router = APIRouter()
 
-model = {}
-model[ModelType.RF] = joblib.load("./models/model_random_forest.joblib")
-model[ModelType.DL] = joblib.load("./models/model_deep_learning.joblib")
-DL_STATS = joblib.load("./models/dataset_stats_deep_learning.joblib")
+dl_model_stats = joblib.load("./models/dataset_stats_deep_learning.joblib")
+models = {}
+models[ModelType.RF] = joblib.load("./models/model_random_forest.joblib")
+models[ModelType.DL] = DLModel(stats=dl_model_stats)
+models[ModelType.DL].load_state_dict(torch.load("./models/model_deep_learning.joblib"))
 
 @router.get(
         "/predict", 
@@ -28,10 +31,14 @@ async def predict(vol_moving_avg:float, adj_close_rolling_med:float, model_type:
             detail="adj_close_rolling_med should be greater than 0 (zero)."
         )
     X = [[vol_moving_avg, adj_close_rolling_med]]
-    model = model[model_type]
+    model = models[model_type]
     prediction = None
     if model_type == ModelType.RF:
         prediction = model.predict(X)[0]
     elif model_type == ModelType.DL:
-        prediction = model.predict(X)[0]
+        prediction = model.predict(
+            vol_moving_avg=vol_moving_avg,
+            adj_close_rolling_med=adj_close_rolling_med
+        )[0]
+    prediction = int(prediction)
     return prediction
