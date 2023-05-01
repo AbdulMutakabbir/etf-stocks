@@ -6,5 +6,5 @@ services:
     region: oregon
     plan: free
     branch: main
-    # rootDir: etf-stocks
+    rootDir: /**
     dockerCommand: docker compose up --build
