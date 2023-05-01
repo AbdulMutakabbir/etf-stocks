@@ -24,21 +24,22 @@ date_format = '%Y-%m-%d'
 model_dir = './models'
 rf_model = 'model_random_forest.joblib'
 dl_model = 'model_deep_learning.joblib'
+dl_dataset_stats = 'dataset_stats_deep_learning.joblib'
 
 [logs]
 log_dir = './logs'
 
 [deep_learning]
-epochs = 1000
+epochs = 5
 learning_rate = 0.001
-batch_size = 262144
-test_split = 0.4
+batch_size = 32768
+test_split = 0.6
 random_state = 1
 negative_slope = 0.01
-hidden_layer_size = 2048
+hidden_layer_size = 128
 
 [random_forest]
-test_size = 0.4
+test_size = 0.6
 random_state = 1
 n_jobs = 4
 max_depth = 10
