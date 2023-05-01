@@ -6,5 +6,5 @@ services:
     region: oregon
     plan: free
     branch: main
-    rootDir: /**
+    # rootDir: /**
     dockerCommand: docker compose up --build
