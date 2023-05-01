@@ -7,3 +7,49 @@
     (3): LeakyReLU(negative_slope=0.01)
   )
 )
+2023-04-30 21:15:19,302 - deep_learning - INFO - Epoch 0 loss: 1.0091209044158458
+2023-04-30 21:21:37,055 - deep_learning - DEBUG - Deep Learning Predictions: tensor([[-1.0263e-04],
+        [-1.0338e-04],
+        [-1.0301e-04],
+        ...,
+        [-1.0370e-04],
+        [-2.0909e-05],
+        [-1.0371e-04]], grad_fn=<LeakyReluBackward0>)
+2023-04-30 21:34:30,724 - deep_learning - DEBUG - Deep Learning Predictions: tensor([[2.0617]], grad_fn=<AddBackward0>)
+2023-04-30 21:36:06,632 - deep_learning - DEBUG - Deep Learning Predictions: tensor([-0.0092], grad_fn=<AddBackward0>)
+2023-04-30 21:36:53,788 - deep_learning - DEBUG - Deep Learning Predictions: -0.009154240600764751
+2023-04-30 21:38:33,932 - deep_learning - INFO - ********************* Started training DL Model *********************************
+2023-04-30 21:38:33,932 - deep_learning - INFO - DLModel(
+  (layers): ModuleList(
+    (0): Linear(in_features=2, out_features=128, bias=True)
+    (1): LeakyReLU(negative_slope=0.01)
+    (2): Linear(in_features=128, out_features=1, bias=True)
+    (3): LeakyReLU(negative_slope=0.01)
+  )
+)
+2023-04-30 22:15:31,391 - deep_learning - INFO - Epoch 0 loss: 1.0006206296682358
+2023-04-30 22:46:27,644 - deep_learning - INFO - Epoch 1 loss: 0.9998490562041601
+2023-04-30 23:21:26,697 - deep_learning - INFO - Epoch 2 loss: 0.9998527794679006
+2023-05-01 00:08:33,908 - deep_learning - INFO - Epoch 3 loss: 0.999963220278422
+2023-05-01 00:53:11,299 - deep_learning - INFO - Epoch 4 loss: 0.999856473048528
+2023-05-01 01:01:42,571 - deep_learning - DEBUG - Deep Learning Predictions: -0.003794912714511156
+2023-05-01 01:04:05,522 - deep_learning - DEBUG - Deep Learning Predictions: tensor([[-0.0007],
+        [-0.0009],
+        [-0.0007],
+        ...,
+        [-0.0008],
+        [-0.0011],
+        [-0.0007]], grad_fn=<LeakyReluBackward0>)
+2023-05-01 01:04:52,858 - deep_learning - DEBUG - Deep Learning Predictions: [[-0.00070745]
+ [-0.00090504]
+ [-0.00070283]
+ ...
+ [-0.0007916 ]
+ [-0.00107146]
+ [-0.00070131]]
+2023-05-01 01:04:53,665 - deep_learning - INFO - Deep Learning Config: {'epochs': 5, 'learning_rate': 0.001, 'batch_size': 32768, 'test_split': 0.7, 'random_state': 1, 'negative_slope': 0.01, 'hidden_layer_size': 128}
+2023-05-01 01:04:53,665 - deep_learning - INFO - Deep Learning MAE: 0.15214815735816956
+2023-05-01 01:04:53,666 - deep_learning - INFO - Deep Learning MSE: 1.553236961364746
+2023-05-01 01:04:53,666 - deep_learning - INFO - Deep Learning EVS: -2.658367156982422e-05
+2023-05-01 01:04:53,666 - deep_learning - INFO - Deep Learning R^2: -2.6750383306017866e-05
+2023-05-01 01:04:53,666 - deep_learning - INFO - -------------------------------------------------------------
