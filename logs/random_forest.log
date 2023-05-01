@@ -1,0 +1,8 @@
+2023-04-30 19:47:05,542 - my_logger - INFO - ----------------      Random Forest      --------------------
+2023-04-30 19:47:05,543 - my_logger - INFO - Random Forest Config: {'test_size': 0.4, 'random_state': 1, 'n_jobs': 4, 'max_depth': 10, 'n_estimators': 50}
+2023-04-30 19:47:05,543 - my_logger - INFO - Random Forest MAE: 466205.7104864816
+2023-04-30 19:47:05,543 - my_logger - INFO - Random Forest MSE: 47421150787878.55
+2023-04-30 19:47:05,543 - my_logger - INFO - Random Forest EVS: 0.6097715745021415
+2023-04-30 19:47:05,544 - my_logger - INFO - Random Forest R^2: 0.6097715368237613
+2023-04-30 19:47:05,544 - my_logger - INFO - -------------------------------------------------------------
+
