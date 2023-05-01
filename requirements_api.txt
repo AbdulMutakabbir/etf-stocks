@@ -6,8 +6,8 @@ pandas
 pyarrow==11.0.0
 pydantic==1.10.7
 requests==2.29.0
-scikit-learn==
-scipy==
+scikit-learn
+scipy
 tomli==2.0.1
 torch
 tqdm==4.65.0
