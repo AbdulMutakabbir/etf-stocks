@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  api:
+    container_name: stock-etf-api
+    image: stock-etf-api:latest
+    build: 
+      context: .
+      dockerfile: DockerFile.api
+    ports:
+      - "8000:80"
+
