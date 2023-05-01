@@ -1,4 +1,4 @@
-dask==2023.4.1
+dask
 fastapi==0.95.1
 fastparquet==2023.4.0
 ipykernel==6.22.0
