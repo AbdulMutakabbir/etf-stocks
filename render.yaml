@@ -8,5 +8,5 @@ services:
     branch: main
     # rootDir: /**
     dockerCommand: docker compose up --build
-    dockerfilePath: ./DockerFile.api 
-    dockerContext: . 
+    # dockerfilePath: ./DockerFile.api 
+    # dockerContext: . 
