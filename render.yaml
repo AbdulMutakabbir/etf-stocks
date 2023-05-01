@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: stock-etf-api
+    env: docker
+    repo: https://github.com/AbdulMutakabbir/etf-stocks.git
+    region: oregon
+    plan: free
+    branch: main
+    rootDir: etf-stocks
+    dockerCommand: docker compose up --build
