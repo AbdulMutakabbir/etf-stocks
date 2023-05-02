@@ -121,4 +121,14 @@ Launch the jupyter server and explore the [notebooks](https://github.com/AbdulMu
   - Stage 3.1: Train Random Forest Model
   - Stage 3.2: Train Deep Learning Model
 ```
-   
+
+## Future Work
+ - Add multithreading
+ - Add test cases
+ - Add MLflow
+ - Add DVC
+ - Write custom code for calculating rolling average
+
+## Pipeline Bottleneck
+1. In the build process `Torch` installation is the biggest bottleneck (68 seconds of installation time).
+2. In data engineering rolling average calculation is the biggest bottle neck. Appx 2 seconds per security.
