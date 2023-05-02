@@ -11,6 +11,48 @@ Prediction API is available at `https://etf-stock.onrender.com/api/predict`. The
 * adj_close_rolling_med: float [required]
 * model_type: string [optional, default='Random Forest']
 
+## Dependencies
+* Docker
+* docker-compose
+* Python3.9
+* Jupyter Notebooks
+* Airflow
+* Torch
+* Scikit-learn
+* Pandas
+* Numpy
+* Dask
+* FastAPI
+
+## Installation 
+1. Clone the repo
+```
+git clone https://github.com/AbdulMutakabbir/etf-stocks.git
+```
+2. Enter into the repo
+```
+cd etf-stocks
+```
+3. Deploy the APIs:
+```
+docker compose -f docker-compose.api.yml up --build
+```
+4. Get the dataset:
+
+Dataset url: https://www.kaggle.com/datasets/jacksoncrow/stock-market-dataset
+
+Extract the dataset zip file and store the data as shown in the [tree structure](https://github.com/AbdulMutakabbir/etf-stocks#project-structure).
+
+5. Deploy Airflow:
+```
+docker compose  -f docker-compose.airflow.yml up --build 
+```
+6. Explore the notebooks
+```
+pip install requirements.txt
+```
+Launch the jupyter server and explore the [notebooks](https://github.com/AbdulMutakabbir/etf-stocks/tree/main/notebooks).
+
 ## Project Structure
 > This repos is structured as follows: 
 > ```
@@ -68,20 +110,10 @@ Prediction API is available at `https://etf-stock.onrender.com/api/predict`. The
 > ```
 >  
 
-## Dependencies
-* Docker
-* Jupyter Notebooks
-* Airflow
-* Torch
-* Scikit-learn
-* Pandas
-* Numpy
-* Dask
-
 ## DAG Structure
 
-```
 ![DAG structure](https://raw.githubusercontent.com/AbdulMutakabbir/etf-stocks/09c13ea85e3c1d7fb9df6c253a1987466eabe069/assets/dag_structure.png)
+```
 - Stage 0 (Dependency Installation): Install the python requirements if not installed
 - Stage 1 (Raw Data Processing): Data is extracted from the raw fils and stored into 
 - Stage 2 (Data Engineering): Feature engineering is performed on the data 
