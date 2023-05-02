@@ -52,7 +52,6 @@ mae = mean_absolute_error(y_test, y_pred)
 mse = mean_squared_error(y_test, y_pred)
 
 logger.info("----------------      Random Forest      --------------------")
-logger.info(f"Random Forest Config: {config['random_forest']}")
 logger.info(f"Random Forest MAE: {mae}")
 logger.info(f"Random Forest MSE: {mse}")
 logger.info(f"Random Forest EVS: {evs}")

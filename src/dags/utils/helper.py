@@ -1,6 +1,5 @@
 import pandas as pd
 import numpy as np
-from tqdm import trange, tqdm
 import os
 import logging
 
@@ -94,11 +93,12 @@ def get_dataset(base_paths:list, symbols_df:pd.DataFrame):
         files = sorted(os.listdir(base_path))
         file_count = len(files)
         # loop over all securities in the folder
-        for file_index in trange(file_count, unit="file"):
+        for file_index in range(file_count):
             file_name = get_file_name(
                 index=file_index,
                 file_list=files
             )
+            print(f"Creating DF for File {file_name}")
             file_path = get_file_path(
                 file_name=file_name, 
                 base_path=base_path
@@ -116,7 +116,7 @@ def get_dataset(base_paths:list, symbols_df:pd.DataFrame):
                     security_name=security_name
                 )
                 dataset_dfs.append(security_df) 
-    
+    print("Finished creating DataFrames")
     # merge all securities data
     dataset_df = pd.concat(dataset_dfs)
     del dataset_dfs
@@ -147,7 +147,7 @@ def get_eng_dataset(path:str):
     security_dfs = []
 
     # loop over all securities to obtain the feature dataset
-    for security in tqdm(securities):
+    for security in securities:
         # get data for security
         security_df = dataset[dataset['Symbol'] == security]
         # get featured dataset

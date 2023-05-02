@@ -8,7 +8,7 @@ from utils.tasks import data_processing, data_engineering
 
 # init args for DAG
 default_args = {
-    'Owner': 'airflow',
+    'Owner': 'root',
     'start_date': days_ago(1)
 }
 
@@ -42,13 +42,13 @@ task_2_data_engineering = PythonOperator(
 
 task_3_1_train_RF = BashOperator(
     task_id ='task_3_1_train_RF',
-    bash_command ='cd /opt/airflow/src/dags && python3 model_training_random_forest.py',
+    bash_command ='cd /opt/airflow/dags/utils && python3 model_training_random_forest.py',
     dag = data_pipeline_dag
 )
 
 task_3_2_train_DL = BashOperator(
     task_id ='task_3_2_train_DL',
-    bash_command ='cd /opt/airflow/src/dags && python3 model_training_deep_learning.py',
+    bash_command ='cd /opt/airflow/dags/utils && python3 model_training_deep_learning.py',
     dag = data_pipeline_dag
 )
 
