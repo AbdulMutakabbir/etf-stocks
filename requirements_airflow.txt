@@ -1,0 +1,11 @@
+fastparquet
+joblib==1.2.0
+numpy
+pandas
+pyarrow
+pydantic==1.10.7
+scikit-learn
+scipy
+tomli==2.0.1
+torch
+tqdm
