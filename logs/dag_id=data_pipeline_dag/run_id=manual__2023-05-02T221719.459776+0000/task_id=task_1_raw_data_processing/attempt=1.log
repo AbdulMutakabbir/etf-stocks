@@ -1,0 +1,20 @@
+[2023-05-02T22:17:33.900+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data_pipeline_dag.task_1_raw_data_processing manual__2023-05-02T22:17:19.459776+00:00 [queued]>
+[2023-05-02T22:17:33.921+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data_pipeline_dag.task_1_raw_data_processing manual__2023-05-02T22:17:19.459776+00:00 [queued]>
+[2023-05-02T22:17:33.922+0000] {taskinstance.py:1331} INFO - Starting attempt 1 of 1
+[2023-05-02T22:17:33.966+0000] {taskinstance.py:1350} INFO - Executing <Task(PythonOperator): task_1_raw_data_processing> on 2023-05-02 22:17:19.459776+00:00
+[2023-05-02T22:17:33.973+0000] {standard_task_runner.py:57} INFO - Started process 552 to run task
+[2023-05-02T22:17:33.981+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'data_pipeline_dag', 'task_1_raw_data_processing', 'manual__2023-05-02T22:17:19.459776+00:00', '--job-id', '41', '--raw', '--subdir', 'DAGS_FOLDER/data_pipeline.py', '--cfg-path', '/tmp/tmph9wkqclz']
+[2023-05-02T22:17:33.984+0000] {standard_task_runner.py:85} INFO - Job 41: Subtask task_1_raw_data_processing
+[2023-05-02T22:17:34.078+0000] {task_command.py:410} INFO - Running <TaskInstance: data_pipeline_dag.task_1_raw_data_processing manual__2023-05-02T22:17:19.459776+00:00 [running]> on host a1e9d3fec021
+[2023-05-02T22:17:34.322+0000] {taskinstance.py:1570} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='data_pipeline_dag' AIRFLOW_CTX_TASK_ID='task_1_raw_data_processing' AIRFLOW_CTX_EXECUTION_DATE='2023-05-02T22:17:19.459776+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-05-02T22:17:19.459776+00:00'
+[2023-05-02T22:17:34.484+0000] {logging_mixin.py:149} INFO - Started extraction for directory /data/etfs
+[2023-05-02T22:17:34.535+0000] {logging_mixin.py:149} INFO - Creating DF for File .gitkeep
+[2023-05-02T22:17:34.538+0000] {logging_mixin.py:149} INFO - Creating DF for File AAAU.csv
+[2023-05-02T22:17:34.584+0000] {logging_mixin.py:149} INFO - Started extraction for directory /data/stocks
+[2023-05-02T22:17:34.644+0000] {logging_mixin.py:149} INFO - Creating DF for File .gitkeep
+[2023-05-02T22:17:34.646+0000] {logging_mixin.py:149} INFO - Creating DF for File A.csv
+[2023-05-02T22:17:34.750+0000] {logging_mixin.py:149} INFO - Finished creating DataFrames
+[2023-05-02T22:17:34.870+0000] {python.py:183} INFO - Done. Returned value was: None
+[2023-05-02T22:17:34.884+0000] {taskinstance.py:1373} INFO - Marking task as SUCCESS. dag_id=data_pipeline_dag, task_id=task_1_raw_data_processing, execution_date=20230502T221719, start_date=20230502T221733, end_date=20230502T221734
+[2023-05-02T22:17:34.950+0000] {local_task_job_runner.py:232} INFO - Task exited with return code 0
+[2023-05-02T22:17:34.995+0000] {taskinstance.py:2674} INFO - 1 downstream tasks scheduled from follow-on schedule check

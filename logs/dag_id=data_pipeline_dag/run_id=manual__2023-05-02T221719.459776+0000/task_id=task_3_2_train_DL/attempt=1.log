@@ -1,0 +1,32 @@
+[2023-05-02T22:17:38.106+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data_pipeline_dag.task_3_2_train_DL manual__2023-05-02T22:17:19.459776+00:00 [queued]>
+[2023-05-02T22:17:38.119+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data_pipeline_dag.task_3_2_train_DL manual__2023-05-02T22:17:19.459776+00:00 [queued]>
+[2023-05-02T22:17:38.120+0000] {taskinstance.py:1331} INFO - Starting attempt 1 of 1
+[2023-05-02T22:17:38.143+0000] {taskinstance.py:1350} INFO - Executing <Task(BashOperator): task_3_2_train_DL> on 2023-05-02 22:17:19.459776+00:00
+[2023-05-02T22:17:38.150+0000] {standard_task_runner.py:57} INFO - Started process 594 to run task
+[2023-05-02T22:17:38.154+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'data_pipeline_dag', 'task_3_2_train_DL', 'manual__2023-05-02T22:17:19.459776+00:00', '--job-id', '43', '--raw', '--subdir', 'DAGS_FOLDER/data_pipeline.py', '--cfg-path', '/tmp/tmpbg3p7not']
+[2023-05-02T22:17:38.156+0000] {standard_task_runner.py:85} INFO - Job 43: Subtask task_3_2_train_DL
+[2023-05-02T22:17:38.218+0000] {task_command.py:410} INFO - Running <TaskInstance: data_pipeline_dag.task_3_2_train_DL manual__2023-05-02T22:17:19.459776+00:00 [running]> on host a1e9d3fec021
+[2023-05-02T22:17:38.461+0000] {taskinstance.py:1570} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='data_pipeline_dag' AIRFLOW_CTX_TASK_ID='task_3_2_train_DL' AIRFLOW_CTX_EXECUTION_DATE='2023-05-02T22:17:19.459776+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-05-02T22:17:19.459776+00:00'
+[2023-05-02T22:17:38.462+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-05-02T22:17:38.463+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'cd /opt/***/dags/utils && python3 model_training_deep_learning.py']
+[2023-05-02T22:17:38.476+0000] {subprocess.py:86} INFO - Output:
+[2023-05-02T22:17:41.161+0000] {subprocess.py:93} INFO - DLModel(
+[2023-05-02T22:17:41.162+0000] {subprocess.py:93} INFO -   (layers): ModuleList(
+[2023-05-02T22:17:41.163+0000] {subprocess.py:93} INFO -     (0): Linear(in_features=2, out_features=2048, bias=True)
+[2023-05-02T22:17:41.163+0000] {subprocess.py:93} INFO -     (1): LeakyReLU(negative_slope=0.01)
+[2023-05-02T22:17:41.164+0000] {subprocess.py:93} INFO -     (2): Linear(in_features=2048, out_features=1, bias=True)
+[2023-05-02T22:17:41.164+0000] {subprocess.py:93} INFO -     (3): LeakyReLU(negative_slope=0.01)
+[2023-05-02T22:17:41.164+0000] {subprocess.py:93} INFO -   )
+[2023-05-02T22:17:41.165+0000] {subprocess.py:93} INFO - )
+[2023-05-02T22:17:41.220+0000] {subprocess.py:93} INFO -   0%|          | 0/1 [00:00<?, ?batch/s]/home/***/.local/lib/python3.7/site-packages/torch/nn/modules/loss.py:536: UserWarning: Using a target size (torch.Size([2393])) that is different to the input size (torch.Size([2393, 1])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
+[2023-05-02T22:17:41.222+0000] {subprocess.py:93} INFO -   return F.mse_loss(input, target, reduction=self.reduction)
+[2023-05-02T22:17:41.224+0000] {subprocess.py:93} INFO - 100%|██████████| 1/1 [00:00<00:00, 16.88batch/s]
+[2023-05-02T22:17:41.290+0000] {subprocess.py:93} INFO -   0%|          | 0/1 [00:00<?, ?batch/s]100%|██████████| 1/1 [00:00<00:00, 14.96batch/s]
+[2023-05-02T22:17:41.352+0000] {subprocess.py:93} INFO -   0%|          | 0/1 [00:00<?, ?batch/s]100%|██████████| 1/1 [00:00<00:00, 16.43batch/s]
+[2023-05-02T22:17:41.407+0000] {subprocess.py:93} INFO -   0%|          | 0/1 [00:00<?, ?batch/s]100%|██████████| 1/1 [00:00<00:00, 19.15batch/s]
+[2023-05-02T22:17:41.571+0000] {subprocess.py:93} INFO -   0%|          | 0/1 [00:00<?, ?batch/s]100%|██████████| 1/1 [00:00<00:00, 22.23batch/s]
+[2023-05-02T22:17:41.904+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2023-05-02T22:17:41.937+0000] {taskinstance.py:1373} INFO - Marking task as SUCCESS. dag_id=data_pipeline_dag, task_id=task_3_2_train_DL, execution_date=20230502T221719, start_date=20230502T221738, end_date=20230502T221741
+[2023-05-02T22:17:42.001+0000] {local_task_job_runner.py:232} INFO - Task exited with return code 0
+[2023-05-02T22:17:42.025+0000] {taskinstance.py:2674} INFO - 0 downstream tasks scheduled from follow-on schedule check
