@@ -36,7 +36,7 @@ batch_size = 32768
 test_split = 0.7
 random_state = 1
 negative_slope = 0.01
-hidden_layer_size = 128
+hidden_layer_size = 2048
 
 [random_forest]
 test_size = 0.6
