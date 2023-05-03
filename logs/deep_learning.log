@@ -134,3 +134,30 @@
 2023-05-01 16:17:27,876 - deep_learning - INFO - Deep Learning R^2: -4.268615186076019e-05
 2023-05-01 16:17:27,876 - deep_learning - INFO - -------------------------------------------------------------
 2023-05-01 16:17:27,876 - deep_learning - INFO - -------------------------------------------------------------
+2023-05-02 20:51:50,548 - deep_learning - INFO - ********************* Started training DL Model *********************************
+2023-05-02 20:51:50,548 - deep_learning - INFO - DLModel(
+  (layers): ModuleList(
+    (0): Linear(in_features=2, out_features=2048, bias=True)
+    (1): LeakyReLU(negative_slope=0.01)
+    (2): Linear(in_features=2048, out_features=1, bias=True)
+    (3): LeakyReLU(negative_slope=0.01)
+  )
+)
+2023-05-02 20:51:50,888 - deep_learning - INFO - Epoch 0 loss: 1.1445742845535278
+2023-05-02 20:51:51,241 - deep_learning - INFO - Epoch 1 loss: 0.9998463988304138
+2023-05-02 20:51:51,456 - deep_learning - INFO - Epoch 2 loss: 0.9998460412025452
+2023-05-02 20:51:51,678 - deep_learning - INFO - Epoch 3 loss: 0.9998458027839661
+2023-05-02 20:51:51,832 - deep_learning - INFO - Epoch 4 loss: 0.999845564365387
+2023-05-02 20:51:52,235 - deep_learning - DEBUG - Deep Learning Predictions: [[-0.02225931]
+ [-0.01170823]
+ [-0.01192546]
+ ...
+ [-0.02246929]
+ [-0.01867983]
+ [-0.02852999]]
+2023-05-02 20:51:52,300 - deep_learning - INFO - Deep Learning Config: {'epochs': 5, 'learning_rate': 0.01, 'batch_size': 32768, 'test_split': 0.7, 'random_state': 1, 'negative_slope': 0.01, 'hidden_layer_size': 2048}
+2023-05-02 20:51:52,300 - deep_learning - INFO - Deep Learning MAE: 0.6436008810997009
+2023-05-02 20:51:52,300 - deep_learning - INFO - Deep Learning MSE: 0.9968358874320984
+2023-05-02 20:51:52,301 - deep_learning - INFO - Deep Learning EVS: 0.0032234787940979004
+2023-05-02 20:51:52,301 - deep_learning - INFO - Deep Learning R^2: 0.002985672093856584
+2023-05-02 20:51:52,301 - deep_learning - INFO - -------------------------------------------------------------
